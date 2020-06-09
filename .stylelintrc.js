@@ -15,5 +15,6 @@ module.exports = {
     'selector-no-qualifying-type': true,
     'declaration-no-important': true,
     'declaration-empty-line-before': null,
+    'value-keyword-case': null,
   },
 };

@@ -15,7 +15,12 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:json/recommended',
     'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
   ],
+
+  rules: {
+    'react/display-name': 'off',
+  },
 
   overrides: [
     {
@@ -35,6 +40,11 @@ module.exports = {
       },
 
       extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+      },
     },
   ],
 };

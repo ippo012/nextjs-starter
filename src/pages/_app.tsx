@@ -1,9 +1,15 @@
-import React from 'react';
-import { AppProps } from 'next/app';
+import React, { ReactNode } from 'react';
+import type { NextComponentType } from 'next';
+import type { AppContext, AppInitialProps, AppLayoutProps } from 'next/app';
 
-const App: React.FC<AppProps> = (props: AppProps) => {
+const App: NextComponentType<AppContext, AppInitialProps, AppLayoutProps> = (
+  props: AppLayoutProps
+) => {
   const { Component, pageProps } = props;
-  return <Component {...pageProps} />;
+
+  const getLayout = Component.getLayout || ((page: ReactNode) => page);
+
+  return <>{getLayout(<Component {...pageProps} />)}</>;
 };
 
 export default App;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const IndexPage: React.FC = () => {
+const IndexPage: FC = () => {
   return <div>Hello</div>;
 };
 

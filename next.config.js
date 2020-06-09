@@ -1,10 +1,10 @@
-const path = require('path');
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images');
 
 const nextConfig = {
   webpack: (config) => {
-    config.resolve.alias['~'] = path.resolve(__dirname);
     return config;
   },
 };
 
-module.exports = nextConfig;
+module.exports = withPlugins([withImages], nextConfig);
