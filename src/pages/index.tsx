@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
+import { NextPage } from 'next';
 
-const IndexPage: FC = () => {
+const IndexPage: NextPage = () => {
   return <div>Hello</div>;
 };
 
