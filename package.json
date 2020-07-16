@@ -11,6 +11,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@react-aria/button": "^3.0.2",
+    "@react-aria/checkbox": "^3.0.2",
+    "@react-stately/toggle": "^3.0.2",
     "next": "^9.4.4",
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.4.0",
